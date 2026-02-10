@@ -9,36 +9,30 @@ body {
     padding: 20px;
 }
 
-.reference-section,
 .image-generator-container {
     background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 40px; /* Restored original margin-top */
     width: 600px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.reference-section h2,
 .image-generator-container h2 {
     text-align: center;
     color: #333;
     margin-top: 0;
 }
 
-.reference-section .control-group,
-.image-generator-container .control-group,
-.add-emoticon-section .control-group {
+.image-generator-container .control-group {
     flex-direction: column;
     gap: 5px;
 }
 
-.reference-section label,
-.image-generator-container label,
-.add-emoticon-section label {
+.image-generator-container label {
     font-weight: bold;
 }
 
@@ -54,8 +48,7 @@ body {
     margin-right: 5px;
 }
 
-.image-generator-container button,
-.add-emoticon-section button {
+.image-generator-container button {
     background-color: #007bff;
     color: white;
     padding: 10px 15px;
@@ -66,8 +59,7 @@ body {
     margin-top: 10px;
 }
 
-.image-generator-container button:hover,
-.add-emoticon-section button:hover {
+.image-generator-container button:hover {
     background-color: #0056b3;
 }
 
@@ -85,51 +77,5 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-top: 10px;
-}
-
-.emoticon-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 10px;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-
-.gallery-item {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: border-color 0.2s;
-}
-
-.gallery-item:hover {
-    border-color: #007bff;
-}
-
-.gallery-item.selected {
-    border-color: #28a745;
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
-}
-
-.add-emoticon-section {
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.add-emoticon-section input[type="text"],
-.add-emoticon-section input[type="file"] {
-    width: calc(100% - 16px);
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
