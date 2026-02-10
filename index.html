@@ -1,14 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoticon Maker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div class="reference-section">
+        <h2>References</h2>
+        <div class="control-group">
+            <label for="referenceImageUpload">Upload Reference Image (Optional):</label>
+            <input type="file" id="referenceImageUpload" accept="image/*">
+            <div id="referenceImagePreviewContainer" style="display: none; margin-top: 10px;">
+                <img id="referenceImagePreview" src="" alt="Reference Image Preview" style="max-width: 112px; max-height: 112px; border: 1px solid #ddd; border-radius: 5px;">
+                <button id="clearReferenceImage" style="margin-left: 10px; padding: 5px 10px;">Clear</button>
+            </div>
+        </div>
+
+        <h3>Emoticon Reference Gallery</h3>
+        <div class="emoticon-gallery">
+            <img src="img/chzzk1.png" alt="Chzzk 1" class="gallery-item" data-prompt="chzzk character style 1">
+            <img src="img/chzzk2.png" alt="Chzzk 2" class="gallery-item" data-prompt="chzzk character style 2">
+            <img src="img/chzzk3.png" alt="Chzzk 3" class="gallery-item" data-prompt="chzzk character style 3">
+            <img src="img/eyes/eyes1.png" alt="Eyes 1" class="gallery-item" data-prompt="big round eyes">
+            <img src="img/eyes/eyes2.png" alt="Eyes 2" class="gallery-item" data-prompt="small sharp eyes">
+            <img src="img/mouths/mouth1.png" alt="Mouth 1" class="gallery-item" data-prompt="happy smiling mouth">
+            <img src="img/mouths/mouth2.png" alt="Mouth 2" class="gallery-item" data-prompt="neutral line mouth">
+        </div>
+    </div>
+
+    <div class="image-generator-container">
+        <h2>Image Generator</h2>
+        <div class="control-group">
+            <label for="prompt">Prompt:</label>
+            <textarea id="prompt" rows="4" placeholder="Describe the image you want to create..."></textarea>
+        </div>
+        <div class="control-group">
+            <label>Format:</label>
+            <input type="radio" id="formatPng" name="format" value="png" checked>
+            <label for="formatPng">PNG</label>
+            <input type="radio" id="formatGif" name="format" value="gif">
+            <label for="formatGif">GIF</label>
+        </div>
+        <button id="generateImageBtn">Generate Image</button>
+        <div class="image-display-area">
+            <h3>Generated Image:</h3>
+            <img id="generatedImage" src="" alt="Generated Image" style="display: none;">
+            <p id="messageArea" style="color: red;"></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
