@@ -19,6 +19,20 @@
         </div>
 
         <h3>Emoticon Reference Gallery</h3>
+        <div class="add-emoticon-section">
+            <div class="control-group">
+                <label for="customEmoticonUpload">Upload Custom Emoticon:</label>
+                <input type="file" id="customEmoticonUpload" accept="image/*">
+                <div id="customEmoticonPreviewContainer" style="display: none; margin-top: 5px;">
+                    <img id="customEmoticonPreview" src="" alt="Custom Emoticon Preview" style="max-width: 50px; max-height: 50px; border: 1px solid #ddd; border-radius: 3px;">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="customEmoticonPrompt">Emoticon Description (e.g., "happy face"):</label>
+                <input type="text" id="customEmoticonPrompt" placeholder="Descriptive text for AI reference">
+            </div>
+            <button id="addCustomEmoticonBtn">Add Custom Emoticon</button>
+        </div>
         <div class="emoticon-gallery">
             <img src="img/chzzk1.png" alt="Chzzk 1" class="gallery-item" data-prompt="chzzk character style 1">
             <img src="img/chzzk2.png" alt="Chzzk 2" class="gallery-item" data-prompt="chzzk character style 2">
